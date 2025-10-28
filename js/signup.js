@@ -12,7 +12,7 @@ document.getElementById('signupForm').addEventListener('submit', function (event
     localStorage.setItem('user',JSON.stringify(user));
 
     alert(`Account created successfully for ${name}!`);
-    window.location.href = "/src/index.html"; // Redirect to login
+    window.location.href = '/src/index1.html';
   } else {
     alert("Please fill in all fields.");
   }
