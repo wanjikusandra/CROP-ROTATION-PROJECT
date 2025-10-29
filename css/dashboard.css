@@ -1,145 +1,149 @@
+/* RESET AND BASE STYLES */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-    background: #f6f8f7;
-    color: #333;
+  background: #f6f8f7;
+  color: #333;
 }
 
+/* HEADER */
 header {
-    background-color: #2e7d32;
-    color: white;
-    padding: 15px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: #2e7d32;
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
 header h1 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
-nav a {
-    color: white;
-    margin-left: 20px;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-header {
-    background-color: #2e7d32;
-    color: white;
-    padding: 15px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-
-header h1 {
-    font-size: 1.5rem;
-}
-
+/* NAVBAR */
 nav {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 nav a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-/* Menu toggle (hamburger icon) */
+/* HAMBURGER ICON */
 .menu-toggle {
-    display: none;
-    font-size: 1.8rem;
-    cursor: pointer;
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
 }
 
-/* Responsive behavior */
-@media (max-width: 768px) {
-    nav {
-        display: none;
-        flex-direction: column;
-        background-color: #2e7d32;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        width: 150px;
-        border-radius: 10px;
-        text-align: right;
-        padding: 10px;
-    }
-
-    nav.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-}
-
-
+/* MAIN CONTENT */
 main {
-    padding: 40px;
+  padding: 40px;
 }
 
 .welcome {
-    text-align: center;
-    margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
+/* CARDS GRID */
 .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
 }
 
 .card {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .card button {
-    background-color: #2e7d32;
-    color: white;
-    border: none;
-    padding: 10px 16px;
-    margin-top: 10px;
-    border-radius: 6px;
-    cursor: pointer;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  margin-top: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .card button:hover {
-    background-color: #256628;
+  background-color: #256628;
 }
 
+/* FOOTER */
 footer {
-    text-align: center;
-    padding: 15px;
-    background: #2e7d32;
-    color: white;
-    margin-top: 40px;
+  text-align: center;
+  padding: 15px;
+  background: #2e7d32;
+  color: white;
+  margin-top: 40px;
+}
+
+/* LEARN MORE SECTION */
+.extra-content {
+  max-height: 0;
+  overflow: hidden;
+  background: #f5f5f5;
+  border-left: 4px solid #4caf50;
+  margin: 20px 40px;
+  padding: 0 15px;
+  border-radius: 8px;
+  transition: max-height 0.4s ease-out;
+}
+
+.extra-content.show {
+  max-height: 300px;
+  padding: 15px;
+}
+
+.extra-content ul {
+  margin: 8px 0 8px 20px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: #2e7d32;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 160px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: right;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
 }
